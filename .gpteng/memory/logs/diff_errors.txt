@@ -4,3 +4,23 @@
 
 2024-05-10T17:51:01.976601
 
+
+2024-05-11T09:17:08.221130
+In Hunk:@@ -51,3 +51,3 @@
+     # Line thickness of 2 px
+-    thickness = 9
++    thickness = 35
+     for i, det in enumerate(pred):
+         for *xyxy, conf, cls in reversed(det):
+             xywh = (xyxy2xywh(torch.tensor(xyxy).view(1, 4)) / gn).view(-1).tolist()  # normalized xywh
+             line = (cls, *xywh)  # label format
+             x,y,w,h = line[1], line[2], line[3], line[4]
+             print(x,y,w,h )
+             line_point = convert_mid_to_corner(x,y,w,h)
+             print(line_point)
+             x1,y1,x2,y2 = convert_to_int(width, height,line_point)
+             print(x1,y1,x2,y2)
+             cv2.rectangle(img0,(x1, y1), (x2, y2),color,thickness)
+             cv2.imshow('test',img0)
+ 
+, there was at least one mismatch.

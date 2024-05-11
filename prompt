@@ -1,2 +1,2 @@
 NEW PROMPT
-change the thickness of line back to 9 in custom dataset file
+Please change the line thickness to 35 in custom detect file and also change the default path of make_folders to "output_folders" in covert.py
