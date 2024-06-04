@@ -1,3 +1,4 @@
+python
 import os
 import sys
 from pathlib import Path
@@ -35,7 +36,7 @@ if __name__ == "__main__":
     device = select_device('0')
     model = DetectMultiBackend(weights, device=device, dnn=False, data=data, fp16=False)
     img = cv2.imread(test_img)
-    img0 = cv2.imread(test_img)
+    img0 = cv/user-images.githubusercontent.com/43101310/150098308-545f2fa1-afd4-4248-8929-02ded6765ecf.png)v.imread(test_img)
     print(img0.shape)
     height, width, _  = img0.shape
     gn = torch.tensor(img.shape)[[1, 0, 1, 0]]
@@ -48,8 +49,8 @@ if __name__ == "__main__":
     # Blue color in BGR
     color = (255, 0, 0)
 
-    # Line thickness of 2 px
-    thickness = 35
+    # Line thickness of 40 px
+    thickness = 40
     for i, det in enumerate(pred):
         for *xyxy, conf, cls in reversed(det):
             xywh = (xyxy2xywh(torch.tensor(xyxy).view(1, 4)) / gn).view(-1).tolist()  # normalized xywh
